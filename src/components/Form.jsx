@@ -1,21 +1,17 @@
-import React from 'react'
+import React from 'react';
 
 export const Form = () => {
     return (
-        /*dsdsdsdd*/
         <div>
-     <h1 className='text-center mt-2'>.</h1>
+            <h1 className='text-center mt-2'>.</h1>
             <h2 className='text-center mt-5'>Calcula el precio de un alquiler rellenando este simple formulario</h2>
             <div className='container mt-5'>
                 <div className='row'>
-                    <div className="col-6 col-lg-6 background2">
-                   
-                        <form className='card' action="">
-
-
+                    <div className="col-lg-6 background2">
+                        <form className='card p-4' action="">
                             <div className="form-group">
                                 <label htmlFor="estancia">¿Durante cuánto tiempo se va a alquilar? </label>
-                                <select name="estancia" id="">
+                                <select className="form-control" name="estancia" id="estancia">
                                     <option value="">---------</option>
                                     <option value="cortaEstancia">Corta estancia (un mes)</option>
                                     <option value="largaEstancia">Estancia larga (de un mes a un año)</option>
@@ -35,50 +31,50 @@ export const Form = () => {
                             </div>
                             <div className="form-group">
                                 <p>¿El edificio dispone de ascensor?</p>
-                                <label htmlFor="si"> Sí </label>
-                                <input type="radio" name='ascensor' id='conAscensor' value="si" />
-                                <label htmlFor="no"> No </label>
-                                <input type="radio" name='ascensor' id='sinAscensor' value="no" />
+                                <div className="form-check">
+                                    <input className="form-check-input" type="radio" name='ascensor' id='conAscensor' value="si" />
+                                    <label className="form-check-label" htmlFor="conAscensor"> Sí </label>
+                                </div>
+                                <div className="form-check">
+                                    <input className="form-check-input" type="radio" name='ascensor' id='sinAscensor' value="no" />
+                                    <label className="form-check-label" htmlFor="sinAscensor"> No </label>
+                                </div>
                             </div>
-                            <div className="form-group ">
+                            <div className="form-group">
                                 <input type="submit" className="btn btn-primary text-light" value="Calcula" />
                             </div>
-
-
                         </form>
-                        <div className='row'>
-                            <div className="col-6 col-lg-6 background2" >
-
+                        <div className='row mt-4'>
+                            <div className="col-lg-6">
                                 <div className="card mt-5">
-                                    <h5 className="card-title h5 h4-sm mt-3 text-center" >Predicción de precios</h5>
-                                    <a href="#" className="btn btn-primary mt-3 text-light">Máximo</a>
-                                    <a href="#" className="btn btn-primary mt-3 text-light">Mínimo</a>
+                                    <h5 className="card-title h5 h4-sm mt-3 text-center">Predicción de precios</h5>
+                                    <div className="d-flex flex-column">
+                                        <a href="#" className="btn btn-primary mt-3">Máximo</a>
+                                        <a href="#" className="btn btn-primary mt-3">Mínimo</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card mt-5">
+                                    <div className="card-body">
+                                        <h5 className="card-title h5 text-center">Evolución de precios en la zona</h5>
+                                        <img className="img-fluid" src="https://conceptosclaros.com/wp-content/uploads/2016/12/hockey-stick-plot.jpg" alt="Gráfico" />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="col-6 col-lg-6 background2" >
-
-                                <div className="card mt-5">
-                                    <h5 className="card-title h5 h4-sm mt-3 text-center">Evolución de precios en la zona</h5>
-                                    <img src="https://conceptosclaros.com/wp-content/uploads/2016/12/hockey-stick-plot.jpg" alt="" />
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-
-                    <div className="col-6 col-lg-6 background2" >
-
+                    <div className="col-lg-6 background2">
                         <div className="card">
-                            <h5 className="card-title h5 h4-sm mt-3 text-center">Precio estimado por zona según las características escogidas</h5>
-                            <img src="https://www.mapasdeespana.com/provincia/mapa-provincia-madrid.png" alt="" />
+                            <div className="card-body">
+                                <h5 className="card-title h5 mt-3 text-center">Precio estimado por zona según las características escogidas</h5>
+                                <img className="img-fluid" src="https://www.mapasdeespana.com/provincia/mapa-provincia-madrid.png" alt="Mapa" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
-
-
     )
 }
